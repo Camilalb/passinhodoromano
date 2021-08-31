@@ -21,3 +21,9 @@ button {
     padding: 20px;
     margin: 10px auto;
 }
+
+#msgCodificada {
+    background-color: darkorange;
+    color: whitesmoke;
+    font-size: 30px;
+}

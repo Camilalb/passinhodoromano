@@ -16,13 +16,13 @@ document.getElementById("escolha").onclick = selecionaOpcao;
 
 var msgCod = document.getElementById('codificar')
 msgCod.addEventListener ('click', function(){
-    escolha.textContent ='Codificar mensagem!'
+    escolha.textContent ='Codificar mensagem'
 })
 
 
 var msgDec = document.getElementById('decodificar')
 msgDec.addEventListener ('click', function(){
-    escolha.textContent ='Decodificar mensagem!'
+    escolha.textContent ='Decodificar mensagem'
 })
 
 
@@ -31,7 +31,7 @@ function selecionaOpcao(event){
 	var valorSelecionado = selecionado.value;    
     
     if (valorSelecionado == "cifra") {  
-        if (escolha.textContent === "Codificar mensagem!"){
+        if (escolha.textContent === "Codificar mensagem"){
             result = codificaCifra (msg.value,+incremento.value)
             msgCodificada.textContent = result
         }
@@ -41,7 +41,7 @@ function selecionaOpcao(event){
         }   
 
     } else if (valorSelecionado == "base") {
-        if (escolha.textContent === "Codificar mensagem!"){
+        if (escolha.textContent === "Codificar mensagem"){
             result = window.btoa(msg.value)
             msgCodificada.textContent = result
         }
