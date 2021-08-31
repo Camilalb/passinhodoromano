@@ -11,4 +11,13 @@ form{
     width: 75%;
     margin: 10px auto;
     height: 100 vw;
+    border: 3.5px dashed rgb(198, 219, 4);
+    border-radius: 20px;
+}
+div {
+    padding: 15px 0;
+}
+button {
+    padding: 20px;
+    margin: 10px auto;
 }

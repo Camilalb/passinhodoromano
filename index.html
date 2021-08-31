@@ -9,43 +9,39 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap" rel="stylesheet">
 </head>
 <body>
     <header><h1>Passinho do Romano</h1></header>
     <main>
-        <div class="formulario">
-            <form id="form">
-                <p>Escreva o texto a ser codificado ou decodificado</p>
-                <textarea name="msg" id="msg" cols="50" rows="5"></textarea>
-                <div id="div1">
-                    <p>Você quer codificar/decodificar com:</p>
-                    <select name="selecao" id="selecao">
-                        <option value=""></option>
-                        <option value="cifra" id="cifra">Cifra de Cesar</option>
-                        <option value="base" id="base">Base64</option>
-                    </select>  
+        <form id="form">
+            <p>Escreva o texto a ser codificado ou decodificado</p>
+            <textarea name="msg" id="msg" cols="50" rows="5"></textarea>
+            <div id="div1">
+                <p>Você quer codificar/decodificar com:</p>
+                <select name="selecao" id="selecao">
+                    <option value=""></option>
+                    <option value="cifra" id="cifra">Cifra de Cesar</option>
+                    <option value="base" id="base">Base64</option>
+                </select>  
+                
+                <div id ='radiobtn'>
+                    <input type="radio" id='codificar' name="cod" checked='true'>
+                    <label for="codificar">Codificar</label>
+                    <input type="radio" id='decodificar' name="cod">
+                    <label for="decodificar">Decodificar</label>
+                    <legend>Digite o valor do deslocamento</legend>
+                    <input type="number" name="deslocamento" id="desloc" max='26' min='1'>
                     
-                    <div id ='radiobtn'>
-                        <input type="radio" id='codificar' name="cod" checked='true'>
-                        <label for="codificar">Codificar</label>
-                        <input type="radio" id='decodificar' name="cod">
-                        <label for="decodificar">Decodificar</label>
-                        <legend>Digite o valor do deslocamento</legend>
-                        <input type="number" name="deslocamento" id="desloc" max='26' min='1'>
-                        
-                    </div>
-
-                   
                 </div>
-                
-                <button id="escolha" class ='botao'>Codificar mensagem</button><br>
-                <textarea name="msg" id="msgCodificada" cols="50" rows="5"></textarea>
 
-                
-            </form>
-        </div>
+               
+            </div>
+            <button id="escolha" class ='botao'>Codificar mensagem!</button><br>
+            <textarea name="msg" id="msgCodificada" cols="50" rows="5"></textarea>
 
+        </form>
+        
     </main>
 
     <footer>
