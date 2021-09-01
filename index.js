@@ -8,8 +8,9 @@ var result =""
 
 var msgCodificada = document.getElementById('msgCodificada')
 
-var selecionado = document.getElementById("selecao");
+var selecionado = document.getElementById("selecao")
 
+var boxdesloc = document.getElementById('boxdesloc')
 
 document.getElementById("escolha").onclick = selecionaOpcao;
 
@@ -33,25 +34,27 @@ function selecionaOpcao(event){
     if (valorSelecionado == "cifra") {  
         if (escolha.textContent === "Codificar mensagem"){
             result = codificaCifra (msg.value,+incremento.value)
-            msgCodificada.textContent = result
+            msgCodificada.textContent = "O texto codificado é " + result
         }
         else {
             result = decodificaCifra (msg.value,+incremento.value)
-            msgCodificada.textContent = result
+            msgCodificada.textContent = "O texto decodificado é " + result
         }   
 
     } else if (valorSelecionado == "base") {
+        
         if (escolha.textContent === "Codificar mensagem"){
             result = window.btoa(msg.value)
-            msgCodificada.textContent = result
+            msgCodificada.textContent = "O texto codificado é " + result
         }
         else {
             result = window.atob(msg.value)
-            msgCodificada.textContent = result
+            msgCodificada.textContent = "O texto decodificado é " + result
             console.log ("Caiu no decodifica Base")
         }         
     }
 }
+
 // Bloco de comando para codificar em Cifra de Cesar
 function codificaCifra (msg, incremento){
     // Separa o texto 
@@ -97,3 +100,16 @@ function decodificaCifra (msg, incremento){
     }
     return msgFinal.join("") 
 }
+
+
+selecionado.addEventListener('click', function desaparece(event){
+    var valorSelecionado = selecionado.value; 
+    event.preventDefault()
+    if (valorSelecionado == "base") {
+        return boxdesloc.style.display = 'none'
+    }
+    else {
+        return boxdesloc.style.display = 'block'
+    }
+    
+}) 
