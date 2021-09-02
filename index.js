@@ -61,7 +61,7 @@ function codificaCifra (msg, incremento){
     msg = msg.toLowerCase()
     msg = msg.split("")
     var msgCodificada = []
-    var msgFinal = []
+    var msgFinal = [] 
     
     for (var i=0; i< msg.length; i++){
         var msg2 = msg[i].charCodeAt()
@@ -83,13 +83,21 @@ function codificaCifra (msg, incremento){
 function decodificaCifra (msg, incremento){
     msg = msg.toLowerCase()
     msg = msg.split("")
+    var inc = Number(incremento)
     var msgCodificada = []
     var msgFinal = []
     
     for (var i=0; i< msg.length; i++){
         var msg2 = msg[i].charCodeAt()
         if ( msg2 !== 32 ){
-            msgCodificada.push(((msg2 - 97 - incremento)%26)+97)
+            if ((msg2 - 97 - inc) >= 0){
+                msgCodificada.push(((msg2 - 97 - inc)%26)+97)
+                console.log(msgCodificada)
+            }
+            else {
+                msgCodificada.push(((msg2 - 97 - inc)+26)+97)
+                console.log(msgCodificada)
+            }
         }
         else {
             msgCodificada.push(msg2)
